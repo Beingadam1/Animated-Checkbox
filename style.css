@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #ccc;
+}
+
+.toggler,
+.toggler-1,
+.toggler-2 {
+  opacity: 0;
+}
+
+label {
+  padding: 1rem;
+  border: 2px solid black;
+  cursor: pointer;
+}
+.toggler:checked + label,
+.toggler-1:checked + label,
+.toggler-2:checked + label {
+  background-color: orange;
+  border: none;
+  transition: background-color 0.3s ease-in;
+}
+
+@media (max-width: 475px) {
+  .container {
+    flex-direction: column;
+  }
+}
